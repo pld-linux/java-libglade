@@ -1,0 +1,13 @@
+diff -urN aa/libglade-java-2.3.4/configure.in libglade-java-2.3.4/configure.in
+--- aa/libglade-java-2.3.4/configure.in	2004-02-04 01:55:19.000000000 +0100
++++ libglade-java-2.3.4/configure.in	2004-02-08 22:23:48.844100472 +0100
+@@ -30,6 +30,9 @@
+ LIBGTKHTML_LIBS=
+ AC_SUBST(LIBGTKHTML_LIBS)
+ 
++AC_SUBST(version)
++AC_SUBST(apiversion)
++
+ dnl Find already installed gnome modules
+ 
+ dnl This is used by the separate tarballs only - the all-in-one package compiles

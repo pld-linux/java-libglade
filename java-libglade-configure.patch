@@ -1,0 +1,53 @@
+diff -urN aa/libglade-java-2.3.4/configure.in libglade-java-2.3.4/configure.in
+--- aa/libglade-java-2.3.4/configure.in	2004-02-04 01:55:19.000000000 +0100
++++ libglade-java-2.3.4/configure.in	2004-02-08 21:54:01.154870544 +0100
+@@ -44,8 +44,8 @@
+ dnl them automatically
+ 
+ 
+-GTKJAR=$(DESTDIR)$(datadir)/java-gtk/gtk$(gtkapiversion).jar
+-NATIVEGTKJAR=$(DESTDIR)$(libdir)/libgtkjar$(gtkapiversion).so
++GTKJAR=${datadir}/java-gnome/gtk${gtkapiversion}.jar
++NATIVEGTKJAR=${libdir}/libgtkjar${gtkapiversion}.so
+ JG_GTK_LIB_PATH=../../gtk/lib/
+ 
+ dnl ------------------------------------------------------------------------
+@@ -55,11 +55,11 @@
+ AC_SUBST(NATIVEGTKJAR)
+ AC_SUBST(JG_GTK_LIB_PATH)
+ 
+-if !test -e $GTKJAR; then
++if ! test -e $GTKJAR; then
+ 	echo "GTK Jar file $GTKJAR not found.";
+ 	exit 8;
+ fi
+-if !test -e $NATIVEGTKJAR; then
++if ! test -e $NATIVEGTKJAR; then
+ 	echo "gcj compiled native jar file $NATIVEGTKJAR not found.";
+ 	exit 8;
+ fi
+@@ -81,8 +81,8 @@
+ dnl them automatically
+ 
+ 
+-GNOMEJAR=$(DESTDIR)$(datadir)/java-gnome/gnome$(apiversion).jar
+-NATIVEGNOMEJAR=$(DESTDIR)$(libdir)/libgnomejar$(apiversion).so
++GNOMEJAR=${datadir}/java-gnome/gnome${gnomeapiversion}.jar
++NATIVEGNOMEJAR=${libdir}/libgnomejar${gnomeapiversion}.so
+ 
+ dnl ------------------------------------------------------------------------
+ 
+@@ -91,11 +91,11 @@
+ AC_SUBST(NATIVEGNOMEJAR)
+ 
+ 
+-if !test -e $GNOMEJAR; then
++if ! test -e $GNOMEJAR; then
+ 	echo "GNOME Jar file $GNOMEJAR not found.";
+ 	exit 8;
+ fi
+-if !test -e $NATIVEGNOMEJAR; then
++if ! test -e $NATIVEGNOMEJAR; then
+ 	echo "gcj compiled native jar file $NATIVEGNOMEJAR not found.";
+ 	exit 8;
+ fi
