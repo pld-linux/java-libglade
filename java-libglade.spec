@@ -1,4 +1,4 @@
-%define	pname	libglade-java
+%define		pname	libglade-java
 Summary:	Java interface for libglade
 Summary(pl):	Wrapper Java dla libglade
 Name:		java-libglade
