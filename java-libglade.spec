@@ -5,12 +5,12 @@
 Summary:	Java interface for libglade
 Summary(pl):	Wrapper Java dla libglade
 Name:		java-libglade
-Version:	2.3.7
+Version:	2.4.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.3/%{pname}-%{version}.tar.bz2
-# Source0-md5:	22b803f9af4448a056381ff6a2103e3e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.4/%{pname}-%{version}.tar.bz2
+# Source0-md5:	991a7bacf4141e76b011c553a3b44a55
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-version_vars.patch
 URL:		http://java-gnome.sourceforge.net/
@@ -18,8 +18,8 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 3.3.2
 BuildRequires:	gtk+2-devel >= 2:2.4.0
-BuildRequires:	java-gtk-devel >= 2.3.7
-BuildRequires:	java-libgnome-devel >= 2.5.7
+BuildRequires:	java-gtk-devel >= 2.4.0
+BuildRequires:	java-libgnome-devel >= 2.6.0
 BuildRequires:	libgcj-devel >= 3.3.2
 BuildRequires:	libglade2-devel >= 1:2.3.6
 BuildRequires:	libgnomeui-devel >= 2.6.0
