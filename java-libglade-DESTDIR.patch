@@ -1,0 +1,12 @@
+diff -urN aa/libglade-java-2.4.3/Makefile.in libglade-java-2.4.3/Makefile.in
+--- aa/libglade-java-2.4.3/Makefile.in	2004-07-20 15:19:24.000000000 +0200
++++ libglade-java-2.4.3/Makefile.in	2004-07-21 15:49:45.882030192 +0200
+@@ -59,7 +59,7 @@
+ 	$(INSTALL) -m644 lib/glade$(apiversion)-$(version).jar $(DESTDIR)$(datadir)/java
+ 	ln -s -f glade$(apiversion)-$(version).jar $(DESTDIR)$(datadir)/java/glade$(apiversion).jar
+ 	-for f in $(DOCUMENTS); do $(INSTALL) -m644 $(JG_DOC_DIR)/$$f $(DESTDIR)$(datadir)/doc/libglade$(apiversion)-java || exit 1 ; done
+-	$(INSTALL) -m644 glade-java.pc $(libdir)/pkgconfig/
++	$(INSTALL) -m644 glade-java.pc $(DESTDIR)$(libdir)/pkgconfig/
+ 
+ native_install:
+ 	$(INSTALL) -s -m644 lib/libgladejar$(apiversion).so.$(version) $(DESTDIR)$(libdir)/
