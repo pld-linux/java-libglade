@@ -5,24 +5,24 @@
 Summary:	Java interface for libglade
 Summary(pl):	Wrapper Java dla libglade
 Name:		java-libglade
-Version:	2.3.6
+Version:	2.3.7
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.3/%{pname}-%{version}.tar.bz2
-# Source0-md5:	45d7a64c2c521029a8482a263420d4f1
+# Source0-md5:	22b803f9af4448a056381ff6a2103e3e
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-version_vars.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 3.3.2
-BuildRequires:	gtk+2-devel >= 2.3.5
-BuildRequires:	java-gtk-devel >= 2.3.6
-BuildRequires:	java-libgnome-devel >= 2.5.6
+BuildRequires:	gtk+2-devel >= 2:2.4.0
+BuildRequires:	java-gtk-devel >= 2.3.7
+BuildRequires:	java-libgnome-devel >= 2.5.7
 BuildRequires:	libgcj-devel >= 3.3.2
-BuildRequires:	libglade2-devel >= 2.3.2
-BuildRequires:	libgnomeui-devel >= 2.5.90
+BuildRequires:	libglade2-devel >= 1:2.3.6
+BuildRequires:	libgnomeui-devel >= 2.6.0
 Obsoletes:	libglade-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -58,6 +58,7 @@ gnomeapiversion="%{gnomeapi}"; export gnomeapiversion
 %{__autoconf}
 %configure \
 	GCJ_JAR=`echo /usr/share/java/libgcj*.jar`
+
 %{__make}
 
 %install
