@@ -13,6 +13,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.3/%{pname}-%{version}
 # Source0-md5:	e9b2d33d1d606a8a7da5146d286fb636
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-version_vars.patch
+Patch2:		%{name}-gcjjar.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -49,6 +50,7 @@ Pliki nag³ówkowe biblioteki java-libglade.
 %setup -q -n %{pname}-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 version="%{version}"; export version
@@ -56,7 +58,8 @@ apiversion="%{api}"; export apiversion
 gtkapiversion="%{gtkapi}"; export gtkapiversion
 gnomeapiversion="%{gnomeapi}"; export gnomeapiversion
 %{__autoconf}
-%configure
+%configure \
+	GCJ_JAR=`echo /usr/share/java/libgcj*.jar`
 %{__make}
 
 %install
