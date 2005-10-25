@@ -2,25 +2,27 @@
 Summary:	Java interface for libglade
 Summary(pl):	Wrapper Java dla libglade
 Name:		java-libglade
-Version:	2.10.1
+Version:	2.12.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.10/%{pname}-%{version}.tar.bz2
-# Source0-md5:	edf7e9e113afa9f002f048d62c87920b
+Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
+# Source0-md5:	55175f40a7759380ef226f9af251f02b
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	gtk+2-devel >= 2:2.4.4
-BuildRequires:	java-gtk-devel >= 2.6.0
-BuildRequires:	java-libgnome-devel >= 2.10.1
+BuildRequires:	java-libgnome-devel >= 2.12.0
 BuildRequires:	libgcj-devel >= 5:3.3.2
 BuildRequires:	libglade2-devel >= 1:2.4.1
 BuildRequires:	libgnomeui-devel >= 2.8.0
+BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Obsoletes:	libglade-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		macros  %{_datadir}/glib-java/macros 
 
 %description
 Java interface for libglade.
@@ -33,6 +35,7 @@ Summary:	Header files for java-libglade library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-libglade
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	java-libgnome-devel >= 2.12.0
 Obsoletes:	libglade-java-devel
 
 %description devel
@@ -45,7 +48,9 @@ Pliki nag³ówkowe biblioteki java-libglade.
 %setup -q -n %{pname}-%{version}
 
 %build
-%{__aclocal} -I `pkg-config --variable macro_dir gtk2-java`
+%{__libtoolize}
+%{__aclocal} -I `pkg-config --variable macro_dir gtk2-java` -I %{macros}
+%{__automake}
 %{__autoconf}
 %configure \
 	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar` \
@@ -76,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc NEWS
-%attr(755,root,root) %{_libdir}/lib*-2.10.so
+%attr(755,root,root) %{_libdir}/lib*-2.12.so
 
 %files devel
 %defattr(644,root,root,755)
