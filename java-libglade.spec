@@ -1,6 +1,6 @@
 %define		pname	libglade-java
 Summary:	Java interface for libglade
-Summary(pl):	Wrapper Java dla libglade
+Summary(pl):	Wrapper Javy dla libglade
 Name:		java-libglade
 Version:	2.12.0
 Release:	1
@@ -28,7 +28,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Java interface for libglade.
 
 %description -l pl
-Wrapper Java dla libglade.
+Wrapper Javy dla libglade.
 
 %package devel
 Summary:	Header files for java-libglade library
