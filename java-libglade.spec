@@ -2,18 +2,18 @@
 Summary:	Java interface for libglade
 Summary(pl):	Wrapper Javy dla libglade
 Name:		java-libglade
-Version:	2.12.1
+Version:	2.12.2
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
-# Source0-md5:	44a223d1c6d66f15288360bbd2ed0c22
+# Source0-md5:	a0b11f2b7ed7c9f998e860212ed3a400
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	gtk+2-devel >= 2:2.4.4
-BuildRequires:	java-libgnome-devel >= 2.12.1
+BuildRequires:	java-libgnome-devel >= 2.12.2
 BuildRequires:	libgcj-devel >= 5:3.3.2
 BuildRequires:	libglade2-devel >= 1:2.4.1
 BuildRequires:	libgnomeui-devel >= 2.8.0
@@ -35,7 +35,7 @@ Summary:	Header files for java-libglade library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-libglade
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	java-libgnome-devel >= 2.12.1
+Requires:	java-libgnome-devel >= 2.12.2
 Obsoletes:	libglade-java-devel
 
 %description devel
@@ -53,7 +53,8 @@ Pliki nag³ówkowe biblioteki java-libglade.
 %{__automake}
 %{__autoconf}
 %configure \
-	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar` \
+	GCJFLAGS="%{rpmcflags}" \
+	JAR=%{_bindir}/fastjar \
 	--without-javadocs
 
 %{__make}
