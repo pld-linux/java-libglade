@@ -3,7 +3,7 @@ Summary:	Java interface for libglade
 Summary(pl):	Wrapper Javy dla libglade
 Name:		java-libglade
 Version:	2.12.3
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
