@@ -2,18 +2,18 @@
 Summary:	Java interface for libglade
 Summary(pl):	Wrapper Javy dla libglade
 Name:		java-libglade
-Version:	2.12.7
+Version:	2.12.8
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libglade-java/2.12/%{pname}-%{version}.tar.gz
-# Source0-md5:	dec39802261247d44d048e83cc342291
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libglade-java/2.12/%{pname}-%{version}.tar.bz2
+# Source0-md5:	373f2ca04384848dd8ff1b0b2a21394a
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	gtk+2-devel >= 2:2.10.6
-BuildRequires:	java-libgnome-devel >= 2.12.6
+BuildRequires:	gtk+2-devel >= 2:2.10.7
+BuildRequires:	java-libgnome-devel >= 2.12.7
 BuildRequires:	libgcj-devel >= 5:3.3.2
 BuildRequires:	libglade2-devel >= 1:2.6.0
 BuildRequires:	libgnomeui-devel >= 2.16.1
@@ -35,7 +35,7 @@ Summary:	Header files for java-libglade library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-libglade
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	java-libgnome-devel >= 2.12.6
+Requires:	java-libgnome-devel >= 2.12.7
 Obsoletes:	libglade-java-devel
 
 %description devel
@@ -54,7 +54,6 @@ Pliki nag³ówkowe biblioteki java-libglade.
 %{__autoconf}
 %configure \
 	GCJFLAGS="%{rpmcflags}" \
-	JAR=%{_bindir}/fastjar \
 	--without-javadocs
 
 %{__make}
