@@ -1,6 +1,6 @@
 %define		pname	libglade-java
 Summary:	Java interface for libglade
-Summary(pl):	Wrapper Javy dla libglade
+Summary(pl.UTF-8):   Wrapper Javy dla libglade
 Name:		java-libglade
 Version:	2.12.8
 Release:	1
@@ -27,12 +27,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Java interface for libglade.
 
-%description -l pl
+%description -l pl.UTF-8
 Wrapper Javy dla libglade.
 
 %package devel
 Summary:	Header files for java-libglade library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki java-libglade
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki java-libglade
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	java-libgnome-devel >= 2.12.7
@@ -41,8 +41,8 @@ Obsoletes:	libglade-java-devel
 %description devel
 Header files for java-libglade library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki java-libglade.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki java-libglade.
 
 %prep
 %setup -q -n %{pname}-%{version}
