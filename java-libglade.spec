@@ -5,7 +5,7 @@ Name:		java-libglade
 Version:	2.12.8
 Release:	2
 License:	LGPL
-Group:		Libraries
+Group:		Libraries/Java
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libglade-java/2.12/%{pname}-%{version}.tar.bz2
 # Source0-md5:	373f2ca04384848dd8ff1b0b2a21394a
 URL:		http://java-gnome.sourceforge.net/
