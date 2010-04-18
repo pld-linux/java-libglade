@@ -22,7 +22,7 @@ BuildRequires:	pkgconfig
 Obsoletes:	libglade-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		macros  %{_datadir}/glib-java/macros 
+%define		macros  %{_datadir}/glib-java/macros
 
 %description
 Java interface for libglade.
