@@ -1,0 +1,3 @@
+- updated to 2.3.5
+- removed outdated libgcj patch
+- added BR: slocate
